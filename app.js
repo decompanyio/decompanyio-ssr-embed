@@ -3,8 +3,8 @@
 // NODE_ENV 설정
 
 
-/*console.log("process.env.NODE_ENV : [" + ( process.env.NODE_ENV ).trim().toUpperCase() + "]");
-console.log("process.env.NODE_ENV_SUB : [" + ( process.env.NODE_ENV_SUB ).trim().toUpperCase() + "]");*/
+console.log("process.env.NODE_ENV : [" + ( process.env.NODE_ENV ).trim().toUpperCase() + "]");
+console.log("process.env.NODE_ENV_SUB : [" + ( process.env.NODE_ENV_SUB ).trim().toUpperCase() + "]");
 
 const path = require('path');
 const logger = require('morgan');
