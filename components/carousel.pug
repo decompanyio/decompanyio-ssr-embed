@@ -13,17 +13,16 @@ mixin carousel-caption(item)
 mixin carousel(id, items, text)
     .carousel.slide(id=`carousel-${id}`, data-ride="carousel", data-interval="false", data-keyboard="true" )
         .carousel-inner(role="listbox")
-            each item,index in items
-                - let imgSrc = item.image;
+            each arr,index in items
                 if(index === 0)
                     .item.active
-                        img(class="carouselImg" src=imgSrc alt=text[index])
+                        img(class="carouselImg" src=arr.image alt=text[index])
                         //span #{item.image}
                         //+carousel-caption(item)
 
                 else
                     .item
-                        img(class="carouselImg" src=imgSrc alt=text[index])
+                        img(class="carouselImg" src=arr.image alt=text[index])
                         //+carousel-caption(item)
 
         //-  Controls

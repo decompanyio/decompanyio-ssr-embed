@@ -4,12 +4,8 @@
     <list default="true" id="7805649e-d1ca-4177-9d23-e02a3917af5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/carousel.pug" beforeDir="false" afterPath="$PROJECT_DIR$/components/carousel.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/configure.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deconfigure.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/local.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +97,11 @@
       <workItem from="1565164995220" duration="599000" />
       <workItem from="1565167941654" duration="1143000" />
       <workItem from="1565169165177" duration="1306000" />
+      <workItem from="1565171316794" duration="567000" />
+      <workItem from="1565228247049" duration="137000" />
+      <workItem from="1565253210424" duration="1363000" />
+      <workItem from="1565310843411" duration="35000" />
+      <workItem from="1565331966476" duration="4086000" />
     </task>
     <task id="LOCAL-00001" summary="2019-06-24&#10;dean">
       <created>1561359680508</created>
@@ -186,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563330490836</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2019-08-07&#10;dean&#10;- 불필요한 스크립트 삭제&#10;- 패키지 설명 추가">
+      <created>1565171366375</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1565171366375</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -237,6 +245,7 @@
     <MESSAGE value="2019-07-09&#10;dean" />
     <MESSAGE value="2019-07-12&#10;dean" />
     <MESSAGE value="2019-07-17&#10;dean" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-07-17&#10;dean" />
+    <MESSAGE value="2019-08-07&#10;dean&#10;- 불필요한 스크립트 삭제&#10;- 패키지 설명 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-08-07&#10;dean&#10;- 불필요한 스크립트 삭제&#10;- 패키지 설명 추가" />
   </component>
 </project>
