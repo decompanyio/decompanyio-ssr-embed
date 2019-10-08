@@ -11,7 +11,7 @@ let mainHost = process.env.NODE_ENV_SUB === 'prod' ? "https://www.polarishare.co
 let embedUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://embed.polarishare.com" : "https://embed.share.decompany.io";
 let viewerUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://viewer.polarishare.com" : "https://viewer.share.decompany.io";
 let getDocumentInfoUrl =  '/api/document/info/';
-let staticUrl = "http://dev-ca-ssr-pdf-static.s3-website-us-west-1.amazonaws.com";
+let staticUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://alpha-ca-static-ssr-embed.s3-us-west-1.amazonaws.com" : "https://dev-ca-static-ssr-embed.s3-us-west-1.amazonaws.com";
 
 router.get('/', (req, res, next) => {
 
