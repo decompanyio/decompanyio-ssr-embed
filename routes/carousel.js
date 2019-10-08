@@ -9,7 +9,9 @@ let apiUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://api.polarishare.com/
 let imageUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://res.polarishare.com" : "https://thumb.share.decompany.io";
 let mainHost = process.env.NODE_ENV_SUB === 'prod' ? "https://www.polarishare.com" : "https://share.decompany.io";
 let embedUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://embed.polarishare.com" : "https://embed.share.decompany.io";
+let viewerUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://viewer.polarishare.com" : "https://viewer.share.decompany.io";
 let getDocumentInfoUrl =  '/api/document/info/';
+let staticUrl = "http://dev-ca-ssr-pdf-static.s3-website-us-west-1.amazonaws.com";
 
 router.get('/', (req, res, next) => {
 
@@ -95,8 +97,10 @@ router.get('/', (req, res, next) => {
             env: process.env.NODE_ENV_SUB,
             mainHost: mainHost,
             embedUrl: embedUrl,
+            viewerUrl: viewerUrl,
             apiUrl: apiUrl,
-            ogUrl: embedUrl + "/" + document.seoTitle
+            ogUrl: embedUrl + "/" + document.seoTitle,
+            staticUrl: staticUrl
         });
     };
 

@@ -3,8 +3,8 @@
 // NODE_ENV 설정
 
 
-console.log("process.env.NODE_ENV : [" + ( process.env.NODE_ENV ).trim().toUpperCase() + "]");
-console.log("process.env.NODE_ENV_SUB : [" + ( process.env.NODE_ENV_SUB ).trim().toUpperCase() + "]");
+/*console.log("process.env.NODE_ENV : [" + ( process.env.NODE_ENV ).trim().toUpperCase() + "]");
+console.log("process.env.NODE_ENV_SUB : [" + ( process.env.NODE_ENV_SUB ).trim().toUpperCase() + "]");*/
 
 const path = require('path');
 const logger = require('morgan');
@@ -12,9 +12,6 @@ const compression = require('compression');
 const express = require('express');
 const app = express();
 const router = express.Router();
-
-
-
 let carouselRouter = require('./routes/carousel');
 let notFoundPageRouter = require('./routes/notFoundPage');
 //let callbackRouter = require('./routes/callback');
@@ -44,6 +41,7 @@ app.use('/', notFoundPageRouter);
 app.use('/404', notFoundPageRouter);
 //app.use('/callback', callbackRouter);
 app.use('/:documentId', carouselRouter);
+app.use('/:documentId/*', carouselRouter);
 app.use(function(err, req, res, next) {     // error handler
     // set locals, only providing error in development
     res.locals.message = err.message;
