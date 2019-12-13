@@ -6,7 +6,7 @@ let templatePath = require.resolve('../views/carousel.pug');
 let templateFn = pug.compileFile(templatePath);
 
 let apiUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://api.polarishare.com/rest" : "https://api.share.decompany.io/rest";
-let imageUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://res.polarishare.com" : "https://thumb.share.decompany.io";
+let imageUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://res.polarishare.com/thumb" : "https://res.share.decompany.io/thumb";
 let mainHost = process.env.NODE_ENV_SUB === 'prod' ? "https://www.polarishare.com" : "https://share.decompany.io";
 let embedUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://embed.polarishare.com" : "https://embed.share.decompany.io";
 let viewerUrl = process.env.NODE_ENV_SUB === 'prod' ? "https://viewer.polarishare.com" : "https://viewer.share.decompany.io";
@@ -41,7 +41,10 @@ router.get('/', (req, res, next) => {
             console.log("요청 URL : " + apiUrl + getDocumentInfoUrl + seoTitle);
 
             xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) resolve(JSON.parse(xhr.responseText));
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    if(JSON.parse(xhr.responseText).message) reject();
+                    resolve(JSON.parse(xhr.responseText));
+                }
             };
 
             xhr.send(null);
@@ -115,13 +118,14 @@ router.get('/', (req, res, next) => {
 
     Promise.resolve()
         .then(init)
-        .then(getData).catch(err => notFoundPageRender(err))
-        .then(data => checkRes(data)).catch(err => notFoundPageRender(err))
+        .then(getData)
+        .then(data => checkRes(data))
         .then(data => setData(data))
         .then(data => {
             res.write(templateFn(data));
             res.end();
         })
+        .catch(err => notFoundPageRender(err))
 });
 
 
