@@ -6,7 +6,6 @@ block body
     #carousel-wrapper
         +carousel("viewer",urlList, text)
         +icon("home")
-        +icon("fullscreen")
         +icon("option-vertical")
         #option-wrapper
             .optionList Auto Mode
@@ -62,13 +61,6 @@ block scripts
         // 홈 버튼
         $(".glyphicon-home").click(() => {
             let url = '#{mainHost}' + "/@" + username + "/" + seoTitle;
-            window.open(url, '_blank');
-        });
-
-
-        // 전체화면 버튼
-        $(".glyphicon-fullscreen").click(() => {
-            let url = '#{viewerUrl}' + "/" + seoTitle;
             window.open(url, '_blank');
         });
 

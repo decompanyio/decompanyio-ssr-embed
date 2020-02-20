@@ -138,7 +138,6 @@ body {
 
 @media (max-width: 575px) {
     .glyphicon-home,
-    .glyphicon-fullscreen,
     .glyphicon-option-vertical{
         font-size: 18px !important;
     }
@@ -201,30 +200,7 @@ body {
     color: #ffffff;
 }
 
-
-
-
-/*전체화면 버튼 CSS*/
-.glyphicon-fullscreen {
-    position: absolute;
-    padding: 4px;
-    display: inline-block;
-    right: 15px;
-    bottom: 18px;
-    top: auto;
-    z-index: 2;
-    font-size: 23px;
-    color: hsla(0, 0%, 100%, .79);
-    cursor: pointer;
-    background: rgba(0, 0, 0, .29);
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-.glyphicon-option-vertical:hover,
-.glyphicon-fullscreen:hover {
+.glyphicon-option-vertical:hover{
     background: rgba(0,0,0,.35);
     color: #fff;
 }
