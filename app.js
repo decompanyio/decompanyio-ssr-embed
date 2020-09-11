@@ -37,6 +37,7 @@ else router.use(compression());
 
 
 
+app.use('', notFoundPageRouter);
 app.use('/', notFoundPageRouter);
 app.use('/404', notFoundPageRouter);
 //app.use('/callback', callbackRouter);

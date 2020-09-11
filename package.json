@@ -1,6 +1,6 @@
 {
   "name": "decompanyio-embed",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "polaris share embed project for embed",
   "main": "lambda.js",
   "config": {
